@@ -1,0 +1,84 @@
+body {
+	width:50%;
+	margin:auto;
+	text-align:center;
+}
+table{
+	margin: auto;
+}
+td {
+	padding: 10px;
+}
+tr {
+	background-color:#cee1ff;
+	transition: background-color 1s;
+}
+td:first-child div:first-child {
+	border: 3px black solid;
+	width:20px;
+	height:20px;
+	position:relative;
+}
+td:first-child div.toggled div {
+	margin:auto;
+	border: 3px black solid;
+	width:20px;
+	height:0;
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+}
+td:first-child div.toggled div:first-child {
+	transform: rotate(45deg);
+}
+td:first-child div.toggled div:last-child {
+	transform: rotate(-45deg);
+}
+.delete {
+	width:20px;
+}
+.plus {
+	padding: 20px;
+	position: relative;
+}
+.plus div {
+	margin: auto;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	position: absolute;
+	width: 20px; 
+	height: 3px;
+	background: black;
+	transition: transform 1s;
+}
+#closed div:first-child {
+	transform: rotate(90deg);
+}
+#open div:first-child {
+	transform: rotate(45deg);
+}
+#open div:nth-child(2) {
+	transform: rotate(-45deg);
+}
+#hide {
+	height:0;
+	opacity:0;
+	visibility:none;
+	transition:height 1s, opacity 1s linear;
+}
+#hide:first-child {
+	height:0;
+	opacity:0;
+	visibility:none;
+	transition:height 1s, opacity 1s linear;
+}
+#show {
+	visibility:visible;
+	height:70px;
+	opacity:1;
+	transition:height 1s, opacity 1s linear;
+}
